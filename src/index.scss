@@ -1,0 +1,94 @@
+// 🎨 Кольори
+$color-primary: #00539C; // Dunder-синій
+$color-secondary: #F1C40F; // Акцентний
+$color-bg: #F9F9F9;
+$color-text: #222;
+$color-muted: #888;
+$color-error: #E74C3C;
+$color-success: #2ECC71;
+
+// 🖋️ Шрифти
+$font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+$font-heading: 'Georgia', serif;
+
+// 📏 Розміри
+$padding-base: 16px;
+$padding-lg: 32px;
+$radius-base: 8px;
+$shadow-base: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+// 🧍‍♀️ Загальні стилі
+body {
+	font-family: $font-main;
+	background-color: $color-bg;
+	color: $color-text;
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+	font-family: $font-heading;
+	color: $color-primary;
+	margin-bottom: $padding-base;
+}
+
+// 🔘 Кнопки
+.button {
+	padding: 0.6em 1.2em;
+	border-radius: $radius-base;
+	border: none;
+	cursor: pointer;
+	font-weight: bold;
+	transition: 0.2s ease;
+
+	&--primary {
+		background-color: $color-primary;
+		color: white;
+
+		&:hover {
+			background-color: darken($color-primary, 10%);
+		}
+	}
+
+	&--secondary {
+		background-color: $color-secondary;
+		color: black;
+
+		&:hover {
+			background-color: darken($color-secondary, 10%);
+		}
+	}
+}
+
+// 🧾 Форми
+.input {
+	padding: 0.5em;
+	border: 1px solid #ccc;
+	border-radius: $radius-base;
+	width: 100%;
+	font-size: 1rem;
+
+	&:focus {
+		outline: none;
+		border-color: $color-primary;
+		box-shadow: 0 0 0 3px rgba($color-primary, 0.2);
+	}
+}
+
+// ⚠️ Повідомлення
+.alert {
+	padding: $padding-base;
+	border-radius: $radius-base;
+	margin-bottom: $padding-base;
+
+	&--error {
+		background-color: rgba($color-error, 0.1);
+		color: $color-error;
+	}
+
+	&--success {
+		background-color: rgba($color-success, 0.1);
+		color: $color-success;
+	}
+}

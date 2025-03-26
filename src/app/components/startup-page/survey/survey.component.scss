@@ -1,0 +1,16 @@
+.survey{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    &__content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &--logo{
+            img{
+                max-width: 72px;
+            }
+        }
+    }
+}
