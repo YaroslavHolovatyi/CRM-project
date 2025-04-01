@@ -1,8 +1,12 @@
 import surveyImage from '../../../../assets/SurveyImage.png'
 import { Button } from 'antd';
 import './survey.component.scss'
+import { useNavigate } from 'react-router';
 
 export default function Survey(){
+
+    const navigate = useNavigate();
+
     return(
         <>
                 <div className="survey">
@@ -17,7 +21,7 @@ export default function Survey(){
                             <h5>Sales Hub</h5>
                         </div>
                         <div className="survey__content--button">
-                            <Button color='cyan' variant='solid'>Explore</Button>
+                            <Button color='cyan' variant='solid' onClick={ () => navigate('/welcome') }>Explore</Button>
                         </div>
                     </div>
                 </div>
